@@ -1,0 +1,46 @@
+
+**** 12/10/18 17:02:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\OrCAD\lastproject-PSpiceFiles\SCHEMATIC1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\sab3awy\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(*) I(*) W(*) D(*) NOISE(*) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LASTPROJECT
+X_U1         N00874 N00898 N00862 N01010 N01006 N00898 N01002 N01010 555B
+C_C1         N00874 N00898  u.2uf  TC=0,0 
+-----------------------------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'TC' to double value. Token can be a constant or expression
+C_C2         N00898 N00910  2.2uf  TC=0,0 
+C_C3         N00862 N00857  10uf  TC=0,0 
+V_V1         N01010 N00874 9V
+R_R1         N00898 N00862  47k TC=0,0 
+R_R2         N00874 N00857  8k TC=0,0 
+R_R3         N00910 N00862  150 TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+

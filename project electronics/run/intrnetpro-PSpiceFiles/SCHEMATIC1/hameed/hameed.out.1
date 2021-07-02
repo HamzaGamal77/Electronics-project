@@ -1,0 +1,47 @@
+
+**** 12/11/18 10:55:28 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-hameed"  [ E:\ELC\project electronics\run\intrnetpro-pspicefiles\schematic1\hameed.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "hameed.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\AL MASRIA 4 COMP\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0.1u 1u 0.01u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INTRNETPRO
+C_C3         N01147 N01163  10u  TC=0,0 
+X_U1         0 N01303 N01147 N01099 N01475 N01303 N01479 N01099 555B
+C_C2         N01617 N01303  2.2u  TC=0,0 
+V_V1         N01099 0 9V
+C_C1         N01303 0  2.2u  TC=0,0 
+R_R2         N01163 0  8R TC=0,0 
+R_R1         N01147 N01303  47k TC=0,0 
+R_R3         N01147 N01617  150 TC=0,0 
+
+**** RESUMING hameed.cir ****
+.END
+
+ERROR(ORPSIM-15108): Subcircuit 555B used by X_U1 is undefined
+
